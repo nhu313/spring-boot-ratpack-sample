@@ -7,6 +7,8 @@ public class JsonData {
 	private String serviceName;
 	private String version;
 	private String response;
+	private int statusCode;
+	private boolean right;
 	
 	public String getDetail() {
 		return detail;
@@ -44,10 +46,16 @@ public class JsonData {
 	public void setResponse(String response) {
 		this.response = response;
 	}
-	@Override
-	public String toString() {
-		return "JsonData [detail=" + detail + ", message=" + message
-				+ ", status=" + status + ", serviceName=" + serviceName
-				+ ", version=" + version + ", response=" + response + "]";
+	public int getStatusCode() {
+		return statusCode;
 	}
+	public void setStatusCode(int statusCode) {
+		this.statusCode = statusCode;
+	}
+	public boolean isRight() {
+		return right;
+	}
+	public void setRight(boolean right) {
+		this.right = right;
+	}	
 }

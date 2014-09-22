@@ -47,8 +47,12 @@ public class Routes extends ChainAction {
 
 			private String createResponse(String content) throws IOException {
 				ObjectMapper mapper = new ObjectMapper();
+				
 				JsonData data = mapper.readValue(content, JsonData.class);
 				data.setServiceName("Spring boot with Ratpack");
+				data.setStatusCode(911);
+				data.setRight(true);
+				
 				String response = mapper.writeValueAsString(data);
 				return response;
 			}
